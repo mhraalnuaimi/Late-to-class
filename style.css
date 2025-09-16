@@ -1,0 +1,86 @@
+/* === Fonts and Base Styles === */
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: #ffe6f0; /* light pink */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    font-family: 'Fredoka One', cursive;
+    color: #ff66a3;
+    text-align: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* === Navigation === */
+nav {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ff66a3;
+    font-weight: bold;
+    margin: 0 15px;
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    color: #ff3385;
+}
+
+/* === Video and Image Styles === */
+.featured-video, .featured-image {
+    width: 100%;
+    max-width: 600px;  /* prevent video/image from being too large */
+    height: auto;
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    display: block;
+    margin: 20px auto;
+}
+
+/* === Hero Section === */
+.hero {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 30px 10px;
+    background: #ffd6e6;
+    border-radius: 25px;
+    margin: 20px 0;
+}
+
+/* === Section Styling === */
+.details {
+    background: #fff0f5;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* === Footer === */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background: #ffb3cc;
+    color: #fff;
+    font-weight: bold;
+    margin-top: 30px;
+    border-radius: 10px 10px 0 0;
+}
+
+
+
+
+
+
