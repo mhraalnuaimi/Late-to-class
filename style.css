@@ -1,86 +1,172 @@
-/* === Fonts and Base Styles === */
+/* main accent color */
+:root {
+  --accent: #ff66a3; 
+}
+
+/* body styling */
 body {
-    font-family: 'Quicksand', sans-serif;
-    background: #ffe6f0; /* light pink */
-    color: #333;
-    margin: 0;
-    padding: 0;
+  font-family: 'Quicksand', sans-serif;
+  background: #ffe6f0;
+  color: #333;
+  margin: 0;
+  padding: 0;
 }
 
+/* headings */
 h1, h2 {
-    font-family: 'Fredoka One', cursive;
-    color: #ff66a3;
-    text-align: center;
+  font-family: 'Fredoka One', cursive;
+  color: #ff66a3;
+  text-align: center;
 }
 
+/* container for page content */
 .container {
-    width: 90%;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-/* === Navigation === */
+/* navigation */
 nav {
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 nav a {
-    text-decoration: none;
-    color: #ff66a3;
-    font-weight: bold;
-    margin: 0 15px;
-    font-size: 1.1rem;
+  text-decoration: none;
+  color: #ff66a3;
+  font-weight: bold;
+  margin: 0 15px;
+  font-size: 1.1rem;
 }
 
 nav a:hover {
-    color: #ff3385;
+  color: #ff3385;
 }
 
-/* === Video and Image Styles === */
-.featured-video, .featured-image {
-    width: 100%;
-    max-width: 600px;  /* prevent video/image from being too large */
-    height: auto;
-    border-radius: 25px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-    display: block;
-    margin: 20px auto;
-}
-
-/* === Hero Section === */
+/* hero section */
 .hero {
-    text-align: center;
-    font-size: 1.5rem;
-    padding: 30px 10px;
-    background: #ffd6e6;
-    border-radius: 25px;
-    margin: 20px 0;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 30px 10px;
+  background: linear-gradient(90deg, #ffd6e6 0%, #ffe6f0 100%);
+  border-radius: 25px;
+  margin: 20px 0;
+  transition: background 0.2s ease; /* smooth gradient shift */
 }
 
-/* === Section Styling === */
+/* details sections */
 .details {
-    background: #fff0f5;
-    padding: 20px;
-    border-radius: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  background: #fff0f5;
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
-/* === Footer === */
+/* featured video and images */
+.featured-video, .featured-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 25px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  display: block;
+  margin: 20px auto;
+}
+
+/* footer */
 footer {
-    text-align: center;
-    padding: 15px 0;
-    background: #ffb3cc;
-    color: #fff;
-    font-weight: bold;
-    margin-top: 30px;
-    border-radius: 10px 10px 0 0;
+  text-align: center;
+  padding: 15px 0;
+  background: #ffb3cc;
+  color: #fff;
+  font-weight: bold;
+  margin-top: 30px;
+  border-radius: 10px 10px 0 0;
 }
 
+/* bios container */
+.bios {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
 
+/* individual bio card */
+.bio {
+  flex: 1 1 250px;
+  max-width: 300px;
+  text-align: center;
+  padding: 20px;
+  border: 2px solid var(--accent);
+  border-radius: 15px;
+  background: #fff0f5;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
 
+/* bio image */
+.bio img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 3px solid var(--accent);
+}
 
+/* bio headings */
+.bio h3 {
+  font-family: 'Fredoka One', cursive;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
 
+/* bio text */
+.bio p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #333;
+}
 
+/* placeholder images */
+.image-placeholder img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 25px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* responsive bios */
+@media screen and (max-width: 600px) {
+  .bios {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* fun fact box for hover */
+.fun-fact {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #555;
+  background: #fff8fc;
+  border: 1px solid #ff66a3;
+  border-radius: 8px;
+  padding: 8px;
+  font-style: italic;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
